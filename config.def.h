@@ -70,9 +70,9 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "1", "togg
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY, 		                XK_F11,    spawn,	   {.v = downvol } },
-	{ MODKEY,                            XK_F9,     spawn,	   {.v = mutevol } },
-	{ MODKEY,                            XK_F12,    spawn,	   {.v = upvol   } },
+	{ MODKEY, 		        XK_F11,    spawn,	   {.v = downvol } },
+	{ MODKEY,                       XK_F9,     spawn,	   {.v = mutevol } },
+	{ MODKEY,                       XK_F12,    spawn,	   {.v = upvol   } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
