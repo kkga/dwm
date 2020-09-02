@@ -11,16 +11,14 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#1C1C1C";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#BBBBBB";
-static const char col_gray4[]       = "#EEEEEE";
-static const char col_cyan[]		= "#5F87AF";
-static const char col_cyan2[]		= "#8FAFD7";
+static const char col_nb[]          = "#1C1C1C";
+static const char col_nf[]          = "#6C6C6C";
+static const char col_sb[]          = "#6C6C6C";
+static const char col_sf[]	        = "#EEEEEE";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan2  },
+	/*               fg         bg          border   */
+	[SchemeNorm] = { col_nf,    col_nb,     col_nb  },
+	[SchemeSel]  = { col_sf,    col_sb,     col_sf  },
 };
 
 /* tagging */
@@ -61,8 +59,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *clipboardcmd[] = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray4, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_nb, "-nf", col_nf, "-sb", col_sb, "-sf", col_sf, NULL };
+static const char *clipboardcmd[] = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_nb, "-nf", col_nf, "-sb", col_sb, "-sf", col_sf, NULL };
 static const char *termcmd[]      = { "alacritty", NULL };
 static const char *lockcmd[]      = { "slock", NULL };
 static const char *volupcmd[]     = { "volume.sh", "-i", "5",     NULL };
