@@ -68,8 +68,8 @@ static const char *voldowncmd[]   = { "volume.sh", "-d", "5",     NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,						XK_minus,  spawn,	       {.v = voldowncmd } },
-	{ MODKEY,                       XK_equal,  spawn,	       {.v = volupcmd   } },
+	{ 0,							XK_F11,    spawn,	       {.v = voldowncmd } },
+	{ 0,			                XK_F12,    spawn,	       {.v = volupcmd   } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ControlMask,           XK_q,      spawn,          {.v = lockcmd } },
