@@ -58,22 +58,12 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_nb, "-nf", col_nf, "-sb", col_sb, "-sf", col_sf, NULL };
-static const char *clipboardcmd[] = { "clipmenu", "-i", "-fn", dmenufont, "-nb", col_nb, "-nf", col_nf, "-sb", col_sb, "-sf", col_sf, NULL };
-static const char *termcmd[]      = { "alacritty", NULL };
-static const char *lockcmd[]      = { "slock", NULL };
-static const char *volupcmd[]     = { "volume.sh", "-i", "5",     NULL };
-static const char *voldowncmd[]   = { "volume.sh", "-d", "5",     NULL };
+/* static char dmenumon[2] = "0"; /1* component of dmenucmd, manipulated in spawn() *1/ */
+/* static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_nb, "-nf", col_nf, "-sb", col_sb, "-sf", col_sf, NULL }; */
+/* static const char *termcmd[]      = { "alacritty", NULL }; */
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ 0,							XK_F11,    spawn,	       {.v = voldowncmd } },
-	{ 0,			                XK_F12,    spawn,	       {.v = volupcmd   } },
-	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ControlMask,           XK_BackSpace,      spawn,          {.v = lockcmd } },
-	{ MODKEY|ControlMask,           XK_c,      spawn,          {.v = clipboardcmd } },
 	{ MODKEY|ShiftMask,	            XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
