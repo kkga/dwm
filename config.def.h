@@ -11,14 +11,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_nb[]          = "#1C1C1C";
-static const char col_nf[]          = "#808080";
-static const char col_sb[]          = "#6C6C6C";
-static const char col_sf[]	        = "#EEEEEE";
+static const char col_nb[]          = "#000000";
+static const char col_nf[]          = "#D8D5C7";
+static const char col_sb[]          = "#555555";
+static const char col_sf[]	    = "#F2EEDE";
+static const char col_accent[]      = "#B58900";
 static const char *colors[][3]      = {
 	/*               fg         bg          border   */
-	[SchemeNorm] = { col_nf,    col_nb,     col_nb  },
-	[SchemeSel]  = { col_sf,    col_sb,     col_sf  },
+	[SchemeNorm] = { col_nf,    col_nb,     col_nf  },
+	[SchemeSel]  = { col_sf,    col_sb,     col_accent  },
 };
 
 /* tagging */
