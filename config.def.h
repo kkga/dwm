@@ -62,11 +62,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norbg, "-nf", col_norfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
-static const char *termcmd[]      = { "alacritty", NULL };
+static const char *termcmd[]      = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key		   function        argument */
-	{ Mod4Mask,			XK_space,	   spawn,	   {.v = dmenucmd } },
+	{ Mod4Mask,			XK_d, 		   spawn,	   {.v = dmenucmd } },
 	{ Mod4Mask|ShiftMask,	        XK_q,		   killclient,     {0} },
 	{ MODKEY,                       XK_b,		   togglebar,      {0} },
 	{ MODKEY,                       XK_j,		   focusstack,     {.i = +1 } },
