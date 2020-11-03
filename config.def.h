@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx       = 2;  /* border pixel of windows */
+static const unsigned int borderpx       = 4;  /* border pixel of windows */
 static const unsigned int snap           = 32; /* snap pixel */
 static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 8;  /* systray spacing */
@@ -9,11 +9,11 @@ static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display s
 static const int showsystray             = 1;  /* 0 means no systray */
 static const int showbar                 = 1;  /* 0 means no bar */
 static const int topbar                  = 0;  /* 0 means bottom bar */
-static const char *fonts[]               = { "monospace:size=9" };
-static const char dmenufont[]            = "monospace:size=9";
+static const char *fonts[]               = { "monospace:size=10" };
+static const char dmenufont[]            = "monospace:size=10";
 static const char col_norbg[]            = "#000000";
 static const char col_norfg[]            = "#777777";
-static const char col_norbo[]            = "#D8D5C7";
+static const char col_norbo[]            = "#000000";
 static const char col_selbg[]            = "#555555";
 static const char col_selfg[]            = "#F2EEDE";
 static const char col_selbo[]            = "#B58900";
