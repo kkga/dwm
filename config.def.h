@@ -8,9 +8,9 @@ static const unsigned int systrayspacing = 8;  /* systray spacing */
 static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;  /* 0 means no systray */
 static const int showbar                 = 1;  /* 0 means no bar */
-static const int topbar                  = 1;  /* 0 means bottom bar */
-static const char *fonts[]               = { "monospace:size=10" };
-static const char dmenufont[]            = "monospace:size=10";
+static const int topbar                  = 0;  /* 0 means bottom bar */
+static const char *fonts[]               = { "monospace:size=9" };
+static const char dmenufont[]            = "monospace:size=9";
 static const char col_norbg[]            = "#000000";
 static const char col_norfg[]            = "#777777";
 static const char col_norbo[]            = "#D8D5C7";
@@ -61,7 +61,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norbg, "-nf", col_norfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
+static const char *dmenucmd[]     = { "dmenu_run", "-b", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norbg, "-nf", col_norfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
 static const char *termcmd[]      = { "kitty", NULL };
 
 static Key keys[] = {
