@@ -1,7 +1,6 @@
 personal fork of dwm (https://dwm.suckless.org/) with the following patches:
 
 - https://dwm.suckless.org/patches/focusonnetactive/
-- https://dwm.suckless.org/patches/hide_vacant_tags/
 - https://dwm.suckless.org/patches/systray/
 - https://dwm.suckless.org/patches/pertag/
 - https://dwm.suckless.org/patches/noborder/
