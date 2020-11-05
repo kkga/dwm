@@ -16,11 +16,11 @@ static const char col_norfg[]            = "#777777";
 static const char col_norbo[]            = "#000000";
 static const char col_selbg[]            = "#555555";
 static const char col_selfg[]            = "#F2EEDE";
-static const char col_selbo[]            = "#B58900";
+static const char col_selbo[]            = "#FFFFFF";
 static const char *colors[][3]           = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_norfg, col_norbg, col_norbo  },
-	[SchemeSel]  = { col_selfg, col_selbg, col_selbo  },
+	/*               fg		bg		border   */
+	[SchemeNorm] = { col_norfg,	col_norbg,	col_norbo  },
+	[SchemeSel]  = { col_selfg,	col_selbg,	col_selbo  },
 };
 
 /* tagging */
@@ -34,6 +34,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Steam",    NULL,       NULL,       5 << 8,       0,           -1 },
+	{ "Telegram", NULL,       NULL,       6 << 8,       0,           -1 },
 };
 
 /* layout(s) */
