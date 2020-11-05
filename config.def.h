@@ -16,7 +16,7 @@ static const char col_norfg[]            = "#777777";
 static const char col_norbo[]            = "#000000";
 static const char col_selbg[]            = "#555555";
 static const char col_selfg[]            = "#F2EEDE";
-static const char col_selbo[]            = "#D78700";
+static const char col_selbo[]            = "#E95420";
 static const char *colors[][3]           = {
 	/*               fg		bg		border   */
 	[SchemeNorm] = { col_norfg,	col_norbg,	col_norbo  },
