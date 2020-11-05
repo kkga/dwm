@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx       = 4;  /* border pixel of windows */
+static const unsigned int borderpx       = 2;  /* border pixel of windows */
 static const unsigned int snap           = 32; /* snap pixel */
 static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 8;  /* systray spacing */
@@ -16,7 +16,7 @@ static const char col_norfg[]            = "#777777";
 static const char col_norbo[]            = "#000000";
 static const char col_selbg[]            = "#555555";
 static const char col_selfg[]            = "#F2EEDE";
-static const char col_selbo[]            = "#FFFFFF";
+static const char col_selbo[]            = "#D78700";
 static const char *colors[][3]           = {
 	/*               fg		bg		border   */
 	[SchemeNorm] = { col_norfg,	col_norbg,	col_norbo  },
