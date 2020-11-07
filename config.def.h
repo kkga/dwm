@@ -8,11 +8,11 @@ static const unsigned int systrayspacing = 8;  /* systray spacing */
 static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray             = 1;  /* 0 means no systray */
 static const int showbar                 = 1;  /* 0 means no bar */
-static const int topbar                  = 0;  /* 0 means bottom bar */
+static const int topbar                  = 1;  /* 0 means bottom bar */
 static const char *fonts[]               = { "monospace:size=10" };
 static const char dmenufont[]            = "monospace:size=10";
 static const char col_norbg[]            = "#000000";
-static const char col_norfg[]            = "#777777";
+static const char col_norfg[]            = "#888888";
 static const char col_norbo[]            = "#000000";
 static const char col_selbg[]            = "#555555";
 static const char col_selfg[]            = "#F2EEDE";
@@ -24,7 +24,7 @@ static const char *colors[][3]           = {
 };
 
 /* tagging */
-static const char *tags[] = { "Q", "W", "E", "A", "S", "D", };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -34,8 +34,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Steam",    NULL,       NULL,       5 << 8,       0,           -1 },
-	{ "Telegram", NULL,       NULL,       6 << 8,       0,           -1 },
+	{ "Steam",    NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Telegram", NULL,       NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */
@@ -63,12 +63,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     = { "dmenu_run", "-b", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norbg, "-nf", col_norfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
+static const char *dmenucmd[]     = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norbg, "-nf", col_norfg, "-sb", col_selbg, "-sf", col_selfg, NULL };
 static const char *termcmd[]      = { "kitty", NULL };
 
 static Key keys[] = {
 	/* modifier                     key		   function        argument */
-	{ Mod4Mask,			XK_d, 		   spawn,	   {.v = dmenucmd } },
+	// { Mod4Mask,			XK_d, 		   spawn,	   {.v = dmenucmd } },
 	{ Mod4Mask|ShiftMask,	        XK_q,		   killclient,     {0} },
 	{ MODKEY,                       XK_b,		   togglebar,      {0} },
 	{ MODKEY,                       XK_j,		   focusstack,     {.i = +1 } },
@@ -97,7 +97,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_a,				   3)
 	TAGKEYS(                        XK_s,				   4)
 	TAGKEYS(                        XK_d,				   5)
-	{ Mod4Mask|ControlMask|ShiftMask, XK_BackSpace,	   quit,           {0} },
+	// { Mod4Mask|ControlMask|ShiftMask, XK_BackSpace,	   quit,           {0} },
 };
 
 /* button definitions */
